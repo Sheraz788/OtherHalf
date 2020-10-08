@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragments_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tv_explore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ly_description_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fitsSystemWindows="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background_white_rounded"
+                android:paddingBottom="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rel_description"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/tv_about_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="About me"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/txt_about_me"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/description_edit_field"
+                    android:hint=""
+                    android:gravity="start"
+                    android:lines="6"
+                    android:padding="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_about_me" />
+
+
+                <TextView
+                    android:id="@+id/tv_looking_for"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/i_m_looking_for"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_about_me" />
+
+
+                <EditText
+                    android:id="@+id/txt_looking_for"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/description_edit_field"
+                    android:gravity="start"
+                    android:lines="6"
+                    android:padding="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_looking_for"
+                    tools:layout_editor_absoluteX="22dp" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/txt_looking_for"
+                    app:layout_constraintStart_toStartOf="@id/txt_looking_for"
+                    app:layout_constraintTop_toBottomOf="@id/txt_looking_for">
+
+                    <Button
+                        android:id="@+id/save_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_bg_purple"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textSize="16sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:visibility="gone"
+                       android:layout_gravity="center_vertical|center_horizontal"
+                        android:elevation="7dp" />
+
+                </FrameLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

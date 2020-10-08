@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "904824785608",
+    "firebase_url": "https://otherhalf-c9018.firebaseio.com",
+    "project_id": "otherhalf-c9018",
+    "storage_bucket": "otherhalf-c9018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904824785608:android:ef790fbbad7627a81073fd",
+        "android_client_info": {
+          "package_name": "com.example.otherhalf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904824785608-tv7mu2a6n0r9age33ko5bkpnr2ovpp3g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.otherhalf",
+            "certificate_hash": "4fd963a05b4114fc61d466cb27b07b6ca0d06fa2"
+          }
+        },
+        {
+          "client_id": "904824785608-vjqkreca05os0d0i8gqeoeit51f70fh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChY-ohJ414op5YqtdDA0b4Bb7usP1gZK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904824785608-vjqkreca05os0d0i8gqeoeit51f70fh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

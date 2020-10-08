@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragments_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel_social_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tv_social_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/social_status"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ly_social_statuc_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fitsSystemWindows="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_white_rounded"
+                android:paddingBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rel_social_status"
+                app:layout_constraintVertical_bias="1.0">
+
+                <RelativeLayout
+                    android:id="@+id/rel_education"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    app:layout_constraintRight_toLeftOf="@id/rel_occupation"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_education"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="15dp"
+                        android:text="@string/education"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+
+                    <EditText
+                        android:id="@+id/txt_education"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:focusable="false"
+                        android:textSize="14sp"
+                        android:layout_below="@id/tv_education"
+                        android:background="@drawable/small_editfield_bg"
+                        android:hint="@string/not_set"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:layout_alignLeft="@id/tv_education"
+                        android:layout_alignStart="@id/tv_education" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_occupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/rel_education"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_occupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/occupation"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txt_occupation"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_occupation"
+                        android:focusable="false"
+                        android:textSize="14sp"
+                        android:layout_alignStart="@id/tv_occupation"
+                        android:layout_alignLeft="@id/tv_occupation"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/small_editfield_bg"
+                        android:hint="@string/not_set"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    app:layout_constraintRight_toLeftOf="@id/rel_kids"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rel_education">
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/status"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txt_status"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_status"
+                        android:focusable="false"
+                        android:textSize="14sp"
+                        android:layout_alignStart="@id/tv_status"
+                        android:layout_alignLeft="@id/tv_status"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/small_editfield_bg"
+                        android:hint="@string/not_set"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_kids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintLeft_toRightOf="@id/rel_status"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/rel_status">
+
+                    <TextView
+                        android:id="@+id/tv_kids"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/kids"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txt_kids"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_kids"
+                        android:focusable="false"
+                        android:textSize="14sp"
+                        android:layout_alignStart="@id/tv_kids"
+                        android:layout_alignLeft="@id/tv_kids"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/small_editfield_bg"
+                        android:hint="@string/not_set"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_living_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rel_status">
+
+                    <TextView
+                        android:id="@+id/tv_living_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/living_style"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txt_living_style"
+                        android:layout_width="330dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:textSize="14sp"
+                        android:layout_below="@id/tv_living_style"
+                        android:layout_alignStart="@id/tv_living_style"
+                        android:layout_alignLeft="@id/tv_living_style"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_field_bg"
+                        android:hint="@string/not_set"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp" />
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/rel_living_style"
+                    app:layout_constraintStart_toStartOf="@+id/rel_living_style"
+                    app:layout_constraintTop_toBottomOf="@id/rel_living_style">
+
+                    <Button
+                        android:id="@+id/save_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/button_bg_purple"
+                        android:text="@string/save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="7dp"
+                        android:elevation="7dp"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

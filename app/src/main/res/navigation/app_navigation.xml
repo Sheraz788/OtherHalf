@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@+id/navigation_explore">
+
+    <fragment
+        android:id="@+id/navigation_explore"
+        android:name="com.example.otherhalf.ui.explore.ExploreFragment"
+        android:label="@string/title_explore"
+        tools:layout="@layout/fragment_explore" >
+        <action
+            android:id="@+id/action_navigation_explore_to_user_profile_detail"
+            app:destination="@id/user_profile_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/user_profile_detail"
+        android:name="com.example.otherhalf.ui.profile.UserProfileDetailFragment"
+        android:label="User Profile"
+        tools:layout="@layout/fragment_user_profile_detail">
+        <action
+            android:id="@+id/action_user_profile_detail_to_chat_log"
+            app:destination="@id/chat_log" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_discover"
+        android:name="com.example.otherhalf.ui.discover.DiscoverFragment"
+        android:label="@string/title_discover"
+        tools:layout="@layout/fragment_discover" >
+        <action
+            android:id="@+id/action_navigation_discover_to_chat_log"
+            app:destination="@id/chat_log" />
+        <action
+            android:id="@+id/action_navigation_discover_to_user_profile_detail"
+            app:destination="@id/user_profile_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_requests"
+        android:name="com.example.otherhalf.ui.requests.RequestsFragment"
+        android:label="@string/title_requests"
+        tools:layout="@layout/fragment_requests" >
+        <action
+            android:id="@+id/action_navigation_requests_to_user_profile_detail"
+            app:destination="@id/user_profile_detail" />
+        <action
+            android:id="@+id/action_navigation_requests_to_chat_log"
+            app:destination="@id/chat_log" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.otherhalf.ui.chat.ChatFragment"
+        android:label="@string/title_chat"
+        tools:layout="@layout/fragment_chat"
+        >
+        <action
+            android:id="@+id/action_navigation_chat_to_chat_log"
+            app:destination="@id/chat_log" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chat_log"
+        android:name="com.example.otherhalf.ui.chat.ChatLogFragment"
+        android:label="Chats"
+        tools:layout="@layout/fragment_chat_log"/>
+
+    <fragment
+        android:id="@+id/navigation_menu"
+        android:name="com.example.otherhalf.ui.menu.MenuFragment"
+        android:label="@string/title_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_navigation_menu_to_profile_fragment"
+            app:destination="@id/profile_fragment" />
+        <action
+            android:id="@+id/action_navigation_menu_to_edit_profile_fragment"
+            app:destination="@id/edit_profile_fragment" />
+        <action
+            android:id="@+id/action_navigation_menu_to_settings_fragment"
+            app:destination="@id/settings_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.example.otherhalf.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile"/>
+
+    <fragment
+        android:id="@+id/edit_profile_fragment"
+        android:name="com.example.otherhalf.ui.profile.EditProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_edit_profile_fragment_to_profile_image_fragment"
+            app:destination="@+id/profile_image_fragment" />
+        <action
+            android:id="@+id/action_edit_profile_fragment_to_editProfileDescription"
+            app:destination="@id/editProfileDescription" />
+        <action
+            android:id="@+id/action_edit_profile_fragment_to_editProfileBasics"
+            app:destination="@id/editProfileBasics" />
+        <action
+            android:id="@+id/action_edit_profile_fragment_to_editProfileSocialStatus"
+            app:destination="@id/editProfileSocialStatus" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_image_fragment"
+        android:name="com.example.otherhalf.ui.profile.ProfileImageFragment"
+        android:label="@string/profile_image"
+        tools:layout="@layout/fragment_profile_image"/>
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.example.otherhalf.ui.menu.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings"/>
+    <fragment
+        android:id="@+id/editProfileDescription"
+        android:name="com.example.otherhalf.ui.profile.EditProfileDescription"
+        android:label="EditProfileDescription"
+        tools:layout="@layout/fragment_edit_profile_description"/>
+    <fragment
+        android:id="@+id/editProfileBasics"
+        android:name="com.example.otherhalf.ui.profile.EditProfileBasics"
+        android:label="EditProfileBasics"
+        tools:layout="@layout/fragment_edit_profile_basics"/>
+    <fragment
+        android:id="@+id/editProfileSocialStatus"
+        android:name="com.example.otherhalf.ui.profile.EditProfileSocialStatus"
+        android:label="EditProfileSocialStatus"
+        tools:layout="@layout/fragment_edit_profile_social_status"/>
+
+</navigation>

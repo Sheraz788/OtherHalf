@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/ly_profile_cover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/img_profile_conver"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_user_profile" />
+            </FrameLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ly_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/background_white_rounded"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@id/rel_profile_pic">
+
+                <RelativeLayout
+                    android:id="@+id/rel_online_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_online"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:paddingEnd="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Online"
+                        android:textColor="@color/green"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_online"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@id/tv_online"
+                        android:src="@drawable/online_status" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_user_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:paddingEnd="5dp"
+                            android:paddingRight="5dp"
+                            android:text="John Smith"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:paddingRight="5dp"
+                            android:text="35"
+                            android:textColor="@color/gray"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_occupation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_age"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:paddingRight="5dp"
+                            android:text="Ukrin"
+                            android:textColor="@color/gray"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_profile_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background_white_rounded"
+                    app:layout_constraintTop_toBottomOf="@id/ly_user_details">
+
+                    <TextView
+                        android:id="@+id/tv_about_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="About"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_about_heading"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/example_text"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_profile_basics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background_white_rounded"
+                    android:paddingBottom="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/rel_profile_details">
+
+                    <TextView
+                        android:id="@+id/tv_basic_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:text="Basics"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_user_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_basic_heading"
+                        android:layout_alignStart="@id/tv_basic_heading"
+                        android:layout_alignLeft="@id/tv_basic_heading"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_age_head"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Age"
+                            android:textColor="@color/black" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tv_basic_age"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="40"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ly_user_looking_for"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ly_user_age"
+                        android:layout_alignStart="@id/tv_basic_heading"
+                        android:layout_alignLeft="@id/tv_basic_heading"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_looking_for_head"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Looking for"
+                            android:textColor="@color/black" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tv_looking_for"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Marriage"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ly_user_current_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ly_user_looking_for"
+                        android:layout_alignStart="@id/tv_basic_heading"
+                        android:layout_alignLeft="@id/tv_basic_heading"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_current_city_head"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Current City"
+                            android:textColor="@color/black" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tv_current_city"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Islamabad"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ly_user_login_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ly_user_current_city"
+                        android:layout_alignStart="@id/tv_basic_heading"
+                        android:layout_alignLeft="@id/tv_basic_heading"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingLeft="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_login_status_head"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Last Login"
+                            android:textColor="@color/black" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tv_login_status"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Online now"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <FrameLayout
+                android:id="@+id/rel_profile_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:civ_border_width="2dp"
+                    android:id="@+id/profile_image"
+                    app:civ_border_color="@android:color/white"
+                    android:src="@drawable/img_user_profile"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    />
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2">
+
+
+        <ImageButton
+            android:id="@+id/like_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chat_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/transparent"
+            android:src="@drawable/like_icon" />
+
+
+        <ImageButton
+            android:id="@+id/chat_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/chat_icon_1" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_purple_not_rounded"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical|center_horizontal">
+
+
+    <TextView
+        android:id="@+id/tv_looking_for"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/looking_for"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/marriage_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/marriage"
+        android:textAllCaps="false"
+        android:layout_marginTop="35dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/borders_transparent_bg"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/marriage_misyar_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/marriage_misyar"
+        android:textAllCaps="false"
+        android:layout_marginTop="30dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/borders_transparent_bg"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/socialising_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/socialising"
+        android:textAllCaps="false"
+        android:layout_marginTop="30dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/borders_transparent_bg"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/online_friends_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/online_friends"
+        android:textAllCaps="false"
+        android:layout_marginTop="30dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/borders_transparent_bg"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <ImageButton
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close_icon"
+        android:background="@color/transparent"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>

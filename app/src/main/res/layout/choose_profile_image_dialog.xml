@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_purple_not_rounded"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical|center_horizontal">
+
+
+    <TextView
+        android:id="@+id/tv_choose_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_image"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <TextView
+        android:id="@+id/tv_choose_image_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/photo_description"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/gallery_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from_gallery"
+        android:layout_marginTop="35dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp"
+        android:background="@drawable/borders_transparent_bg"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/take_shot_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/take_a_shot"
+        android:layout_marginTop="30dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp"
+        android:background="@drawable/borders_transparent_bg"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <ImageButton
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close_icon"
+        android:background="@color/transparent"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>

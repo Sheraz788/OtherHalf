@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.chat.ChatFragment"
+    android:background="@drawable/fragments_background">
+
+    <TextView
+        android:id="@+id/tv_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chat"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="00dp"
+        android:paddingTop="25dp"
+        android:paddingLeft="30dp"
+        android:paddingStart="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/ly_swiping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:background="@drawable/chat_swipe_background"
+        app:layout_constraintTop_toBottomOf="@id/tv_chat"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <ImageView
+            android:id="@+id/img_swiping_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/swiping_logo"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/tv_swiping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_swiping"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="40dp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ly_swiping_small"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/chat_swipe_background"
+        app:layout_constraintTop_toBottomOf="@id/tv_chat"
+        app:layout_constraintLeft_toLeftOf="@id/tv_chat">
+
+
+        <ImageView
+            android:id="@+id/img_swiping_logo1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/swiping_logo"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/tv_swiping1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_swiping"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="30dp"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ly_swiping_small">
+    <RelativeLayout
+        android:id="@+id/rel_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rel_chat_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chats"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More"
+                android:textSize="18sp"
+                android:textColor="@color/purple"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_chat_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rel_chat_options"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

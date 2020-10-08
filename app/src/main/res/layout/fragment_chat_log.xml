@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:background="@drawable/fragments_background">
+
+
+
+    <RelativeLayout
+        android:id="@+id/ly_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/ly_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/header_bg">
+            <TextView
+                android:id="@+id/tv_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/you_matched"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"/>
+
+            <FrameLayout
+                android:id="@+id/rel_profile_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_heading"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignStart="@+id/tv_heading"
+                android:layout_alignLeft="@id/tv_heading"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_user_profile"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_username_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/rel_profile_pic"
+                android:layout_toEndOf="@+id/rel_profile_pic"
+                android:layout_toRightOf="@+id/rel_profile_pic"
+                android:text="@string/example_name"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_username_to"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="more"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ly_user_info"
+            android:layout_alignParentBottom="true">
+
+            <FrameLayout
+                android:id="@+id/ly_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/message_field_bg">
+
+                <EditText
+                    android:id="@+id/edittext_chat_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/message_field_bg"
+                    android:ems="10"
+                    android:hint="@string/enter_message"
+                    android:inputType="textPersonName"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="20dp"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginRight="70dp"/>
+
+                <TextView
+                    android:id="@+id/send_button_chat_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textSize="18sp"
+                    android:layout_gravity="end|center_vertical"
+                    android:text="Send"
+                    android:paddingRight="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/text_color"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_chat_log"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_green_light"
+                android:layout_above="@id/ly_edittext"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
